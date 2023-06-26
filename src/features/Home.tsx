@@ -54,10 +54,26 @@ const Home = () => {
     handlePage();
   }, [location, page]);
 
+  const style = {
+    homeContainer: {
+      height: '100vh',
+      width: '100wh'
+    },
+    contentContainer:{
+      width: '100%',
+      backgroundColor: 'gray',
+      height: '100%',
+      paddingLeft: '100px',
+      paddingTop: '20px'
+    }
+  };
+
   return (
-    <div>
+    <div style={style.homeContainer}>
       <Navigation navItems={navItems} />
-      {currentPage}
+      <div style={style.contentContainer}>
+        {currentPage}
+      </div>
     </div>
   );
 };
