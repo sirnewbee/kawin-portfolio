@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dev-info",
-    element: <DeveloperInformation />
+    element: <DeveloperInformation/>
   },
   {
     path: "/home",

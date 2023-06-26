@@ -12,6 +12,7 @@ import {
   PieChartOutlined,
 } from '@ant-design/icons';
 import Navigation from "../components/navigation";
+import { clearTransitions } from "../global/AnimationScripts";
 
 const Home = () => {
   const location = useLocation();
@@ -20,9 +21,11 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState<JSX.Element | null>(null);
   const [navItems , setNavItems] = useState([
     {label: 'Projects', key: '/projects', icon: <PieChartOutlined />, onClick: function(){
+      clearTransitions();
       navigate('?page=projects');
     }},
     {label: 'Dev Information', key: 'dev-info', icon: <DesktopOutlined />, onClick: function(){
+      clearTransitions();
       navigate('?page=dev-info');
     }}
   ]);

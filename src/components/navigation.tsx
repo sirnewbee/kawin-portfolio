@@ -33,7 +33,6 @@ function getItem(
 
 
 const Navigation: React.FC<NavigationProps> = ({ navItems }) => {
-  console.log("getItem::", getItem('Option 1', '1', <PieChartOutlined />));
   const items: MenuItem[] = navItems;
   
   // [

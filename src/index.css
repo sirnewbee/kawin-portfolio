@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.transition-container {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.transition-container.active {
+  transform: translateY(0%);
+}
