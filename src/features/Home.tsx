@@ -20,13 +20,20 @@ const Home = () => {
   const [page, setPage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<JSX.Element | null>(null);
   const [navItems , setNavItems] = useState([
-    {label: 'Projects', key: '/projects', icon: <PieChartOutlined />, onClick: function(){
-      clearTransitions();
-      navigate('?page=projects');
+    {label: 'Projects', key: 'projects', icon: <PieChartOutlined />, children: [
+      {key: 'managed-pmo', label: 'Managed PMO', icon: ""},
+      {key: 'greener-laundry', label: 'Greener Laundry', icon: ""},
+      {key: 'solas', label: 'Solas', icon: ""},
+      {key: 'five-sigma', label: 'Five Sigma', icon: ""},
+      {key: 'zoom-rpm', label: 'ZoomRPM', icon: ""},
+      {key: 'jomalia-shipping', label: 'Jomali Shipping', icon: ""},
+    ], onClick: function(): void {
+      // clearTransitions();
+      // navigate('?page=projects');
     }},
-    {label: 'Dev Information', key: 'dev-info', icon: <DesktopOutlined />, onClick: function(){
-      clearTransitions();
-      navigate('?page=dev-info');
+    {label: 'Dev Information', key: 'dev-info', icon: <DesktopOutlined />, onClick: function(): void{
+      // clearTransitions();
+      // navigate('?page=dev-info');
     }}
   ]);
 

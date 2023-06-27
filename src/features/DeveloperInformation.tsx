@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { AnimationProps } from "../structures/DataTypes";
 import { toggleTransition } from '../global/AnimationScripts';
 
 const DeveloperInformation= () => {
-  useEffect(() => {
-    toggleTransition('dev-information');
-  }, []);
-
   return (
-    <div id="dev-information" className="transition-container">
+    <div id="dev-information">
       Developer information
     </div>
   );

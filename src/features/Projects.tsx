@@ -2,12 +2,8 @@ import React, { useEffect } from "react";
 import { toggleTransition } from '../global/AnimationScripts';
 
 const Projects = () => {
-  useEffect(() => {
-    toggleTransition('projects');
-  }, []);
-
   return (
-    <div id="projects" className="transition-container">
+    <div id="projects">
       Projects
     </div>
   );
